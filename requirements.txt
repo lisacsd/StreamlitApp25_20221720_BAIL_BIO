@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+plotly
+pyarrow
+altair
+pydeck
+requests
+geopandas>=0.14
+pyproj>=3.6
+shapely>=2.0
+fiona>=1.9
+rtree>=1.2
