@@ -96,12 +96,25 @@ except Exception as e:
 
 # --- Sidebar (Filters) ---
 st.sidebar.title("Analysis Parameters")
+
 # --- Metric Selector (used in multiple visualizations) ---
-metric = st.sidebar.selectbox(
+# 1. Map Display Name to Internal Column Name
+METRIC_MAP = {
+    "Total Entries": "total",
+    "Paying Visitors": "payant",
+    "Free Visitors": "gratuit",
+}
+
+# 2. Use the English display names for the selector
+selected_metric_display = st.sidebar.selectbox(
     "Select metric to analyze:",
-    ["total", "payant", "gratuit"],
+    list(METRIC_MAP.keys()),
     index=0
 )
+
+# 3. Assign the actual column name (e.g., 'payant') to the 'metric' variable
+metric = METRIC_MAP[selected_metric_display]
+
 st.sidebar.caption("Choose between total entries, paying visitors, or free visitors.")
 
 
@@ -607,3 +620,4 @@ Persistent under-performance is frequently tied to international exposure, narro
 - **Standardize audience tracking** (age categories are sparse) to measure accessibility and inclusion.  
 - Share **best practices** from leading regions/museums (programming, partnerships, proximity marketing).
 """)
+
