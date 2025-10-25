@@ -20,8 +20,8 @@ To run this application locally in a clean environment:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [Your_Repo_URL]
-    cd [repo_name]
+    git clone https://github.com/lisacsd/StreamlitApp25_20221720_BAIL_BIO.git
+    cd StreamlitApp25_20221720_BAIL_BIO
     ```
 
 2.  **Create and Activate Environment (Recommended):**
